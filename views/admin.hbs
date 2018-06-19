@@ -1,0 +1,503 @@
+<!--[if lt IE 7]>
+		<p class="browsehappy">Vous utilisez un navigateur <strong>non supporté</strong> car trop ancien. Veuillez, s'il vous plaît, mettre <a href="http://browsehappy.com/">votre navigateur à jour</a> afin de profiter pleinement de l'expérience proposée par ce site.</p>
+		<![endif]-->
+<!-- open/close -->
+<form method="POST" action="/admin/submit">
+    <header>
+        <section class="hero">
+            <div class="texture-overlay"></div>
+            <div class="container">
+                <div class="row nav-wrapper">
+                    <div class="col-md-6 col-sm-6 col-xs-6 text-left">
+                        <a href="#">
+                            <img id="main-logo" src="/images/custom/main_logo.jpeg" alt="Logo du site">
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-6 text-right navicon">
+                        <p>MENU</p>
+                        <a id="trigger-overlay" class="nav_slide_button nav-toggle" href="#">
+                            <span></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="row hero-content">
+                    <div class="col-md-12">
+                        <h1 class="animated fadeInDown">
+                            <span class="pseudo-span">
+                                <label for="title">Nom du site</label>
+                                <input type="text" name="title" placeholder="{{ title }}" />
+                            </span>
+                            ,
+                            <span class="pseudo-span">
+                                <label for="slug">Slogan</label>
+                                <input type="text" name="slug" placeholder="{{slug }}" />
+                            </span>
+                        </h1>
+                        <a href="#about" class="use-btn animated fadeInUp">Présentation</a>
+                        <a href="#featuresSlider" class="learn-btn animated fadeInUp">Contact
+                            <i class="fa fa-arrow-down"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    {{#if video }}
+    <section class="video" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h1>
+                        <a id="video_preview" href="{{ video }}?autoplay=1&wmode=opaque&fs=1" class="youtube-media">
+                            <i class="fa fa-play-circle-o"></i> Aperçu</a>
+                            <span class="pseudo-span">
+                                <label for="video">Modifier le lien</label>
+                                <input type="text" name="video" placeholder="{{ video }}" onkeyup="document.querySelector('#video_preview').setAttribute('href', this.value);"/>
+                            </span>
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    {{/if}}
+
+    <section class="features-intro">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 nopadding features-intro-img">
+                    <div class="features-bg">
+                        <div class="texture-overlay"></div>
+
+                    </div>
+                </div>
+                <div class="col-md-6 nopadding">
+                    <div class="features-slider">
+                        <ul class="slides" id="featuresSlider">
+                            <li>
+
+                                <h1>Nous contacter</h1>
+                                <p>
+                                    <br>Courriel: 
+                                    <input type="text" name="contact.email" placeholder="{{ contact.email }}"/>
+                                    <br>Téléphone: <input type="text" name="contact.phone" placeholder="{{ contact.phone }}"/> - Mobile: <input type="text" name="contact.mobile" placeholder="{{ contact.mobile }}"/> - Fax: <input type="text" name="contact.fax" placeholder="{{ contact.fax }}"/>
+                                    <br>Adresse: <input type="text" name="address.name" placeholder="{{ address.name }}"/> - <input type="text" name="address.number" placeholder="{{ address.number }}"/> <input type="text" name="address.street" placeholder="{{ address.street }}"/> - <input type="text" name="address.zip" placeholder="{{ address.zip }}"/> <input type="text" name="address.city" placeholder="{{
+                                    address.city }}"/>
+                                    <br>Bureaux ouverts <input type="text" name="contact.opening" placeholder="{{ contact.opening }}"/>
+                                </p>
+                                <p>
+                                    <a href="" class="arrow-btn">Demande de rendez-vous
+                                        <i class="fa fa-long-arrow-right"></i>
+                                    </a>
+                                </p>
+
+                            </li>
+                            <li>
+                                <h1>Consultation juridique en ligne</h1>
+                                <p>Vous avez une question juridique précise et souhaitez être conseillé(e) ?</p>
+                                <p>
+                                    <a href="" class="arrow-btn">Nous consulter
+                                        <i class="fa fa-long-arrow-right"></i>
+                                    </a>
+                                </p>
+                            </li>
+                            <li>
+                                <h1>L'écoute d'un spécialiste, la synthèse d'un généraliste</h1>
+                                <p>L’Office Notarial de Vertou vous apporte avec ses conseils, sa revue d’actualité juridique
+                                    quotidienne et sa foire aux questions - FAQ.</p>
+                                <p>
+                                    <a href="#features" class="arrow-btn">Nous connaitre
+                                        <i class="fa fa-long-arrow-right"></i>
+                                    </a>
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="features-list" id="features">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+
+                    <div class="col-md-4 feature-1 wp2">
+                        <div class="feature-icon">
+                            <i class="fa fa-desktop"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h1>Compétence</h1>
+                            <p>L’Office Notarial de Vertou met à votre service une équipe de collaborateurs qualifiés dans une
+                                large palette de domaines :
+                            </p>
+                            <a href="" class="read-more-btn">En savoir plus
+                                <i class="fa fa-chevron-circle-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 feature-2 wp2 delay-05s">
+                        <div class="feature-icon">
+                            <i class="fa fa-flash"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h1>Consultations juridiques</h1>
+                            <p>Nous vous proposons une étude de fond personnalisée pour chaque demande.
+                            </p>
+                            <a href="" class="read-more-btn">En savoir plus
+                                <i class="fa fa-chevron-circle-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 feature-3 wp2 delay-1s">
+                        <div class="feature-icon">
+                            <i class="fa fa-list-alt"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h1>Documents utiles</h1>
+                            <p>Retrouvez les documents que nous mettons à votre disposition</p>
+                            <a href="" class="read-more-btn">En savoir plus
+                                <i class="fa fa-chevron-circle-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="showcase">
+        <div class="showcase-wrap">
+            <div class="texture-overlay"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="device wp3">
+                            <div class="device-content">
+                                <div class="showcase-slider">
+                                    <ul class="slides" id="showcaseSlider">
+                                        <li>
+                                            <img src="/images/custom/portrait1.jpeg" alt="Device Content Image">
+                                        </li>
+                                        <li>
+                                            <img src="/images/custom/portrait1.jpeg" alt="Device Content Image">
+                                        </li>
+                                        <li>
+                                            <img src="/images/custom/portrait1.jpeg" alt="Device Content Image">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6" id="presentation-container">
+                        <h1>Présentation</h1>
+                        <p>
+                            <label for="presentation.content">Contenu</label>
+                            <div class="boutons">
+                            <input type="button" value="G" onclick="document.execCommand('bold', false, '')">
+                            <input type="button" value="I" onclick="document.execCommand('italic', false, '')" style="font-style:italic">
+                            <input type="button" value="S" onclick="document.execCommand('underline', false, '')" style="text-decoration:underline">
+                            <input type="button" value="A" onclick="document.execCommand('strikeThrough', false, '')" style="text-decoration:line-through">
+                            <input type="button" value="++" onclick="document.execCommand('increaseFontSize', false, '')">
+                            <input type="button" value="--" onclick="document.execCommand('decreaseFontSize', false, '')">
+                            <input type="button" value="Effacer" onclick="document.execCommand('delete', false, '')">
+                        </div>
+                        <div class="boutons">
+                            <input type="button" value="Gauche" onclick="document.execCommand('justifyleft', false, '')">
+                            <input type="button" value="Centrer" onclick="document.execCommand('justifyCenter', false, '')">
+                            <input type="button" value="Droite" onclick="document.execCommand('justifyright', false, '')">
+                            <input type="button" value="Annuler" onclick="document.execCommand('undo', false, '')">
+                        </div>
+                        <div class="boutons">
+                            <input type="button" value="Exp" onclick="document.execCommand('superscript', false, '')">
+                            <input type="button" value="Ind" onclick="document.execCommand('subscript', false, '')">
+                            <input type="button" value="Couper" onclick="document.execCommand('cut', false, '')">
+                            <input type="button" value="Copier" onclick="document.execCommand('copy', false, '')">
+                            <input type="button" value="Coller" onclick="document.execCommand('paste', false, '')">
+                        </div>
+
+                        <div contentEditable id="articlecontent" class="col s6">
+                            {{ presentation.content }}
+                        </div>
+
+                        </p>
+                        <blockquote class="team-quote">
+                            <div class="avatar">
+                                <img src="/images/custom/portrait2.png" alt="User Avatar">
+                            </div>
+                            <p>"<input type="text" name="presentation.slug" placeholder="{{ presentation.slug }}"/>" - <input type="text" name="presentation.autor" placeholder="{{ presentation.autor }}"/></p>
+
+                        </blockquote>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="gmap-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21690.866979015726!2d-1.5084494577350518!3d47.18999776617911!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4805e89e709f33e7%3A0x6ed40797430c1d01!2sFiona+Le+Masson+Notaire+Vertou!5e0!3m2!1sfr!2sfr!4v1522919732704"
+            style="border:0" allowfullscreen="" width="100%" height="450" frameborder="0"></iframe>
+    </div>
+
+    <section class="screenshots-intro">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+
+                    <h1>Environnement</h1>
+                    <p>
+                            <label for="environment">Contenu</label>
+                            <div class="boutons">
+                            <input type="button" value="G" onclick="document.execCommand('bold', false, '')">
+                            <input type="button" value="I" onclick="document.execCommand('italic', false, '')" style="font-style:italic">
+                            <input type="button" value="S" onclick="document.execCommand('underline', false, '')" style="text-decoration:underline">
+                            <input type="button" value="A" onclick="document.execCommand('strikeThrough', false, '')" style="text-decoration:line-through">
+                            <input type="button" value="++" onclick="document.execCommand('increaseFontSize', false, '')">
+                            <input type="button" value="--" onclick="document.execCommand('decreaseFontSize', false, '')">
+                            <input type="button" value="Effacer" onclick="document.execCommand('delete', false, '')">
+                        </div>
+                        <div class="boutons">
+                            <input type="button" value="Gauche" onclick="document.execCommand('justifyleft', false, '')">
+                            <input type="button" value="Centrer" onclick="document.execCommand('justifyCenter', false, '')">
+                            <input type="button" value="Droite" onclick="document.execCommand('justifyright', false, '')">
+                            <input type="button" value="Annuler" onclick="document.execCommand('undo', false, '')">
+                        </div>
+                        <div class="boutons">
+                            <input type="button" value="Exp" onclick="document.execCommand('superscript', false, '')">
+                            <input type="button" value="Ind" onclick="document.execCommand('subscript', false, '')">
+                            <input type="button" value="Couper" onclick="document.execCommand('cut', false, '')">
+                            <input type="button" value="Copier" onclick="document.execCommand('copy', false, '')">
+                            <input type="button" value="Coller" onclick="document.execCommand('paste', false, '')">
+                        </div>
+
+                        <div contentEditable id="articlecontent" class="col s6">
+                            {{ environment }}
+                        </div>
+
+                        </p>
+                    <p>
+                        <a href="#screenshots" class="arrow-btn">Afficher la gallerie
+                            <i class="fa fa-long-arrow-right"></i>
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="screenshots" id="screenshots">
+        <div class="container-fluid">
+            <div class="row">
+                <ul class="grid">
+                    <li>
+                        <figure>
+                            <img src="/img/01-screenshot.jpg" alt="Screenshot 01">
+                            <figcaption>
+                                <div class="caption-content">
+                                    <a href="/img/large/01.jpg" class="single_image">
+                                        <i class="fa fa-search"></i>
+                                        <br>
+                                        <p>Commentaire 1</p>
+                                    </a>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure>
+                            <img src="/img/02-screenshot.jpg" alt="Screenshot 01">
+                            <figcaption>
+                                <div class="caption-content">
+                                    <a href="/img/large/02.jpg" class="single_image">
+                                        <i class="fa fa-search"></i>
+                                        <br>
+                                        <p>Commentaire 2</p>
+                                    </a>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure>
+                            <img src="/img/03-screenshot.jpg" alt="Screenshot 01">
+                            <figcaption>
+                                <div class="caption-content">
+                                    <a href="/img/large/03.jpg" class="single_image">
+                                        <i class="fa fa-search"></i>
+                                        <br>
+                                        <p>Commentaire 3</p>
+                                    </a>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure>
+                            <img src="/img/04-screenshot.jpg" alt="Screenshot 01">
+                            <figcaption>
+                                <div class="caption-content">
+                                    <a href="/img/large/04.jpg" class="single_image">
+                                        <i class="fa fa-search"></i>
+                                        <br>
+                                        <p>Commentaire 4</p>
+                                    </a>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </li>
+                </ul>
+            </div>
+            <div class="row">
+                <ul class="grid">
+                    <li>
+                        <figure>
+                            <img src="/img/05-screenshot.jpg" alt="Screenshot 01">
+                            <figcaption>
+                                <div class="caption-content">
+                                    <a href="/img/large/05.jpg" class="single_image">
+                                        <i class="fa fa-search"></i>
+                                        <br>
+                                        <p>Commentaire 5</p>
+                                    </a>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure>
+                            <img src="/img/06-screenshot.jpg" alt="Screenshot 01">
+                            <figcaption>
+                                <div class="caption-content">
+                                    <a href="/img/large/06.jpg" class="single_image">
+                                        <i class="fa fa-search"></i>
+                                        <br>
+                                        <p>Commentaire 6</p>
+                                    </a>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure>
+                            <img src="/img/07-screenshot.jpg" alt="Screenshot 01">
+                            <figcaption>
+                                <div class="caption-content">
+                                    <a href="/img/large/07.jpg" class="single_image">
+                                        <i class="fa fa-search"></i>
+                                        <br>
+                                        <p>Commentaire 7</p>
+                                    </a>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure>
+                            <img src="/img/08-screenshot.jpg" alt="Screenshot 01">
+                            <figcaption>
+                                <div class="caption-content">
+                                    <a href="/img/large/08.jpg" class="single_image">
+                                        <i class="fa fa-search"></i>
+                                        <br>
+                                        <p>Commentaire 8</p>
+                                    </a>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="download" id="download">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center wp4">
+                    <h1>Besoin d'autres informations ? </h1>
+                    <a href="#featuresSlider" class="download-btn">Contactez-nous!
+                        <i class="fa fa-download"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <h1 class="footer-logo">
+                        <img src="/images/custom/main_logo.png" height="150px" alt="Footer Logo Blue">
+                    </h1>
+                    <p>Votre notaire à Vertou
+                    </p>
+                </div>
+                <div class="col-md-7">
+                    <ul class="footer-nav">
+                        <li>
+                            <a href="#about">Présentation</a>
+                        </li>
+                        <li>
+                            <a href="#featuresSlider">Contact</a>
+                        </li>
+                        <li>
+                            <a href="#screenshots">Gallerie</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="overlay overlay-boxify">
+        <nav>
+            <ul>
+                <li>
+                    <a href="#about">
+                        <i class="fa fa-desktop"></i>Présentation</a>
+                </li>
+                <li>
+                    <a href="#featuresSlider">
+                        <i class="fa fa-envelope"></i>Contact</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="#screenshots">
+                        <i class="fa fa-image"></i>Gallerie</a>
+                </li>
+
+            </ul>
+        </nav>
+    </div>
+
+    <div class="float top right">
+        <input type="submit"/>
+    </div>
+
+</form>
+
+<div class="loader">
+    <svg viewBox="0 0 32 32" width="32" height="32">
+        <circle id="spinner" cx="16" cy="16" r="14" fill="none"></circle>
+    </svg>
+</div>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="/js/min/toucheffects-min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="/js/flickity.pkgd.min.js"></script>
+<script src="/js/jquery.fancybox.pack.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="/js/retina.js"></script>
+<script src="/js/waypoints.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/min/scripts-min.js"></script>
+
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+<script>
+		// (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+		// function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+		// e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+		// e.src='//www.google-analytics.com/analytics.js';
+		// r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+		// ga('create','UA-XXXXX-X');ga('send','pageview');
+</script>
